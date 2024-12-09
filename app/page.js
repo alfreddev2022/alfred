@@ -57,7 +57,7 @@ export default function Home() {
             Streamline your decision-making process with the power of our advanced voting platform. Conduct elections, surveys, and polls effortlessly and efficiently, ensuring transparency and accuracy
           </p>
 
-          <Link href={'https://alrfredbc.onrender.com/admin/login'}>
+          <Link href={'https://alrfredbc.onrender.com/admin/events/login'}>
            <button className='w-[65vw] lg:w-[20vw] h-[6.5vh] md:mt-6 bg-[#1E3231] text-white rounded-[5px] text-[1.5em] lg:text-[1.2em] font-[600] flex justify-center  items-center gap-2'>Login <FaArrowRight color={'#fff'} size= {25}  />
            </button>
           </Link>
