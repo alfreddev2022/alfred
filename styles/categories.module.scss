@@ -1,0 +1,28 @@
+@media screen and (max-width:600px) {
+    #mainContainer{
+        height: auto;
+        padding-bottom: 0;
+    }
+    #navContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-left: 30px;
+        
+        #linksElement{
+            font-size: 17px;
+        }
+
+        #navLink{
+            gap:3vw;
+        }
+
+        #navLink li{
+            display: none;
+        }
+
+        #navLink button{
+            display: block;
+        }
+    }
+}

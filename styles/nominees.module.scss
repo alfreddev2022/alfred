@@ -1,0 +1,99 @@
+@media screen and (max-width:900px){
+    #mainContainer{
+        height: auto;
+        padding-bottom: 5vh;
+
+        h1{
+            text-align: center;
+        }
+    }
+    #navContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-left: 30px;
+        
+        #linksElement{
+            font-size: 17px;
+        }
+
+        #navLink{
+            gap:3vw;
+        }
+
+        #navLink li{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1vh;
+        }
+
+        #navLink button{
+            display: block;
+        }
+    }
+
+    #secondContainer{
+        width: 100vw;
+    }
+
+    #cardContainer {
+        width: 100vw;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px; 
+    }
+
+    #cardContainer section{
+        margin-top: 1vh;
+    }
+
+    #getin{
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width:600px){
+    #mainContainer{
+        height: auto;
+        padding-bottom: 5vh;
+
+        h1{
+            text-align: center;
+        }
+    }
+    #navContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-left: 30px;
+        
+        #linksElement{
+            font-size: 17px;
+        }
+
+        #navLink{
+            gap:3vw;
+        }
+
+        #navLink li{
+            display: none;
+        }
+
+        #navLink button{
+            display: block;
+        }
+    }
+
+    #secondContainer{
+        width: 100vw;
+    }
+
+    #cardContainer {
+        grid-template-columns: repeat(1,1fr);
+      }
+
+    #getin{
+        font-size: 1.5em;
+    }
+}

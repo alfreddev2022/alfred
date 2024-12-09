@@ -1,0 +1,117 @@
+@media screen and (max-width:900px) {
+    #mainContainer {
+        height: auto;
+       
+    }
+
+    #navContainer {
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        padding-left: 10%;
+        padding-right: 10%;
+
+        #linksElement {
+            font-size: 17px;
+            width: 30vw;
+        }
+
+        #navLink {
+            gap: 1vw;
+            width: 60vw;
+            position: relative;
+            left: -4em;
+        }
+
+        #navLink button {
+            display: block;
+        }
+
+        #navLink input {
+            width: 100vw;
+            text-align: start;
+        }
+    }
+
+    #cardContainer {
+        width: 100vw;
+        height: auto;
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: 3.5em;
+        justify-content:center;
+        justify-items:center;
+        gap:20px
+    }
+
+    #search {
+        position: relative;
+        left: 5vw;
+    }
+
+    #getin {
+        font-size: 1.5em;
+    }
+
+}
+
+
+@media screen and (max-width:600px) {
+    #navContainer {
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0%;
+
+        #linksElement {
+            font-size: 15px;
+            width: 30vw;
+        }
+
+        #navLink {
+            gap: 3vw;
+            display: none;
+        }
+
+        #navLink button {
+            display: block;
+        }
+
+        #navLink input {
+            width: 100vw;
+            text-align: start;
+        }
+
+        #getin {
+            font-size: 1.5em;
+        }
+
+    }
+
+    #cardContainer {
+        width: 100vw;
+        height: auto;
+        grid-template-columns: repeat(1, 1fr);
+        padding-left: 1.5em;
+    }
+
+    //   #search{
+
+    //  flex: 0.5;
+    //   }
+
+    #search input {
+        min-width: 50vw;
+    }
+
+    #lastCard {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5em;
+    }
+
+}

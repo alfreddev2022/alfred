@@ -1,0 +1,192 @@
+@media screen and (max-width:900px){
+    #mainContainer{
+        height:auto;
+        padding-bottom: 0;
+    }
+    #navContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-left: 30px;
+        
+        #linksElement{
+            font-size: 17px;
+        }
+
+        #navLink{
+            gap:3vw;
+            margin-left: 5vw;
+        }
+
+        #navLink li{
+            display: none;
+        }
+
+        #navLink button{
+            display: block;
+        }
+    }
+
+    #cardContainer{
+        display: flex;
+        flex-direction: column;
+        margin-top: 15vh;
+        width: 100vw;
+        height: auto;
+
+        #firstCard{
+            width: 100vw;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        
+        }
+
+        #image{
+            height: 40vh;
+            width: 50vw;
+        }
+
+        #firstCardText{
+            width: 100vw;
+            height:auto;
+            margin-top: 2vh;
+            text-align: center;
+
+        }
+
+        #firstCardText h4{
+            color: rgb(134, 132, 132);
+            font-size: 2.8vw;
+        }
+    }
+
+    #secondCard{
+        margin-top:-10vh;
+        width: 100vw;
+
+        #usdCode{
+            font-size: 3vw;
+            word-spacing: 1vw;
+        }
+
+        h4{
+            font-weight: 700;
+        }
+
+        #inforDetails{
+            gap: 4vh;
+            padding: 10px;
+            margin-left: 10px;
+        }
+
+        #inforDetails h2{
+            border-bottom: 1px solid darkgrey;
+        }
+
+
+    }
+    #getin{
+        font-size: 4vw;
+    }
+
+    #infoBox button{
+        width: 30vw;
+    }
+
+
+    #infoBox h2{
+        font-size: 4vw;
+        margin-top: 2vh;
+    }
+    #infoBox h3{
+        font-size: 3vw;
+    }
+    #infoBox a{
+        font-size: 3vw;
+    }
+
+}
+
+@media screen and (max-width:600px){
+    #mainContainer{
+        height:auto;
+        padding-bottom: 0;
+    }
+    #navContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-left: 30px;
+        
+        #linksElement{
+            font-size: 17px;
+        }
+
+        #navLink{
+            gap:3vw;
+            margin-left: 5vw;
+        }
+
+        #navLink li{
+            display: none;
+        }
+
+        #navLink button{
+            display: block;
+        }
+    }
+
+    #cardContainer{
+        display: flex;
+        flex-direction: column;
+        margin-top: 15vh;
+        width: 100vw;
+        height: auto;
+
+        #firstCard{
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #image{
+            height: 40vh;
+            width: 70vw;
+        }
+
+        #firstCardText{
+            width: 80vw;
+            height:auto;
+            margin-top: 2vh;
+            margin-left: 7vw;
+        }
+
+        #firstCardText h4{
+            color: rgb(134, 132, 132);
+        }
+    }
+
+    #secondCard{
+        margin-top:-10vh;
+        width: 100vw;
+
+        #inforDetails{
+            gap: 4vh;
+            padding: 10px;
+            margin-left: 10px;
+        }
+
+        #inforDetails h2{
+            border-bottom: 1px solid darkgrey;
+        }
+
+
+    }
+    #getin{
+        font-size: 4vw;
+    }
+}
