@@ -117,7 +117,7 @@ const Page = () => {
 
           {!loading && eventsToShow.map(eventData => (
 
-            <div key={eventData.id} className='sm:w-[29vw]   transform transition-transform duration-300 sm:hover:scale-[106%]  overflow-hidden border rounded-lg h-[27rem]   hover:shadow-xl  items-center   p-0 '>
+            <div key={eventData.id} className='sm:w-[29vw]   transform transition-transform duration-300 sm:hover:scale-[106%]  overflow-hidden border rounded-lg h-[27rem]   hover:shadow-xl  items-center mt-4   p-0 '>
 
               <Link href={`slug/${eventData.id}`}> <img ref={ref} src={getImageUrl(eventData.id)} alt={`Event ${eventData.id}`} className='w-full min-h-[20rem] max-h-[14rem] min-h-[20rem] ' /> </Link>
               <div className='flex  flex-col  w-full bg-[white] font-[500] text-[#02040F]  '>
