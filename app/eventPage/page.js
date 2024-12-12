@@ -9,7 +9,7 @@ import FaceIcon from "../../public/facebook.png";
 import InstaIcon from "../../public/instagram.gif";
 import WhatIcon from "../../public/whatsapp.png";
 import TwitIcon from "../../public/twitter.png";
-import Vote from '../../public/VOTE.jpg'
+import Votes from '../../public/Votes.jpg'
 import style from '../../styles/app.module.scss'
 
 export default function Home() {
@@ -45,7 +45,7 @@ export default function Home() {
 
       <div className="py-20 flex flex-col  justify-center items-center">
         <div className="lg:flex lg:flex-row-reverse lg:px-20">
-          <Image src={Vote} className=" lg:w-[50vw]" />
+          <Image src={Votes} className=" lg:w-[50vw]" />
 
           <section className="py-10  lg:w-[50vw] flex flex-col justify-center items-center lg:items-start gap-4 px-2">
             <h1 className="text-[1.5em] font-[500]"> Empower Your Vote with Us </h1>
