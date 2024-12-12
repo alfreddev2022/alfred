@@ -115,8 +115,8 @@ const eventSlugFilter = eventSlug;
           <section id={style.infoBox} className='flex flex-col gap-4 items-center mt-5 '>
 
           <div className='flex gap-4'>
-            <Link href={`http://localhost:3000/category/${eventSlugFilter[0]&&eventSlugFilter[0].id} vote`}><button className='text-white bg-[purple] w-[6rem] h-[5vh] rounded-[5px]'>Vote</button></Link>
-            <Link href={`http://localhost:3000/category/${eventSlugFilter[0]&&eventSlugFilter[0].id} Results`}><button className='text-white bg-[#08ec26] w-[6rem] h-[5vh] rounded-[5px]'>Results</button></Link>
+              <Link href={`/category/${eventSlugFilter[0] && eventSlugFilter[0].id} vote`}><button className='text-white bg-[purple] w-[6rem] h-[5vh] rounded-[5px]'>Vote</button></Link>
+              <Link href={`/category/${eventSlugFilter[0] && eventSlugFilter[0].id} Results`}><button className='text-white bg-[#08ec26] w-[6rem] h-[5vh] rounded-[5px]'>Results</button></Link>
             </div>
 
             <h2 id={style.getin} className='text-[1.3vw]'>Get In Touch</h2>
