@@ -7,7 +7,7 @@ export default function page() {
 
   const [voters,setVoters] = useState([])
 
-  const getVoters = () => axios.get("https://api.allvotesgh.com/organizer/getVotes").then(res => (setVoters(res.data.voterec), console.log(res.data.voterec)))
+  const getVoters = () => axios.get("https://api.allvotesgh.com/organizer/getVotes").then(res => (setVoters(res.data.voterec)))
 
   useEffect(()=>{getVoters()},[])
 
@@ -19,7 +19,7 @@ export default function page() {
   const currentDate = moment().format('YYYY-MM-DD');
   const expiredEvent = eventData.filter(e=>moment(currentDate).isAfter(e.expired));
   const presentEvent = eventData.filter(e=>moment(currentDate).isBefore(e.expired));
-  console.log(presentEvent)
+
 
 
   useEffect(() => {
@@ -29,7 +29,7 @@ export default function page() {
       .then((response) => {
         setProducts(response.data.events[0]);
         setEvents(response.data.events[0])
-       console.log(response.data.events)
+
       })
       .catch((error) => {
         console.error("Error fetching events:", error);
@@ -42,7 +42,7 @@ export default function page() {
   const totalProfit = voters.reduce((a,b)=>{return a + parseFloat(b.cost);
   },0)
 
-  console.log(totalProfit)
+
 
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage =10;

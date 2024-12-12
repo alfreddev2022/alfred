@@ -123,7 +123,7 @@ const page = ({params}) => {
   };
 
   const handlePaymentClose = () => {
-    console.log("Payment closed");
+
   };
 
 

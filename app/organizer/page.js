@@ -11,7 +11,7 @@ export default function page() {
 
   const [voters,setVoters] = useState([])
 
-  const getVoters = () => axios.get("https://api.allvotesgh.com/organizer/getVotes").then(res => (setVoters(res.data.voterec), console.log(res.data.voterec)))
+  const getVoters = () => axios.get("https://api.allvotesgh.com/organizer/getVotes").then(res => (setVoters(res.data.voterec)))
 
   useEffect(()=>{getVoters()},[])
 
@@ -76,7 +76,7 @@ const getDecryptedUserDataFromCookie =  () => {
       .get("https://api.allvotesgh.com/organizer/nominee")
       .then((response) => {
         setProducts(response.data.nominees[0]);
-       console.log(response.data.nominees[0])
+
       })
       .catch((error) => {
         console.error("Error fetching products:", error);

@@ -59,7 +59,7 @@ const Page = () => {
         },
       });
 
-      console.log("Event added successfully:");
+
 
     } catch (error) {
       console.error("Error adding event:", error);
@@ -74,7 +74,7 @@ const Page = () => {
       .get("https://api.allvotesgh.com/admin/events")
       .then((response) => {
         setEvents(response.data.events[0])
-        console.log(response.data.events[0])
+
       })
       .catch((error) => {
         console.error("Error fetching events:", error);

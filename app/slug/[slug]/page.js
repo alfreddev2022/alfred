@@ -52,16 +52,13 @@ const eventSlugFilter = eventSlug;
 
 
     const image = images.filter(img => img.metadata.name.split('/')[1].split('.')[0] === eventSlug[0].id)
-    console.log(image)
+
 
 
 
     return image[0] && image[0].url
   }
-  console.log(events)
-  console.log(eventSlug)
 
-  console.log(eventSlugFilter)
   return (
     <div id={style.mainContainer} className='w-[100vw] h-[100vh] px-20 flex flex-col items-center gap-4'>
       <nav id={style.navContainer} className="flex  justify-between w-[100vw] px-8 bg-[#02040F] text-white items-center fixed">

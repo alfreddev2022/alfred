@@ -20,7 +20,7 @@ const [events,setEvents] = useState([])
   const [images, setImages] = useState([])
    const getImageUrl = (id)=>{
     const image = images.filter( img=>img.metadata.name.split('/')[1].split('.')[0]===id)
-    console.log(image)
+
     return  image[0] && image[0].url
   }
   useEffect(() => {
@@ -44,7 +44,7 @@ const [events,setEvents] = useState([])
     setIsMenuOpen(!isMenuOpen);
   };
     const eventData = events
-  console.log(images)
+
       const [currentPage, setCurrentPage] = useState(1);
 
       // Calculate the range of events to display based on the current page

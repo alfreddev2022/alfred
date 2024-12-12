@@ -9,7 +9,7 @@ import axios from 'axios'
 
 export default function RootLayout({ children }) {
     const [events, setEvents] = useState([]);
-    const [orgemail,setorgemial]=useState("")
+  const [orgemail, setorgemail] = useState("")
    useEffect(()=>{axios
      .get("https://api.allvotesgh.com/admin/events")
       .then((response) => {
@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
       })},[]);
 
   return (
-    <MyContext.Provider value={{events,setEvents}}>
+    <MyContext.Provider value={{ events, setEvents, setorgemail, orgemail }}>
       <html lang="en">
         <body className={inter.className}>{children}</body>
       </html>

@@ -52,40 +52,60 @@ const router = useRouter();
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post(`https://api.allvotesgh.com/admin/events/login`, {
+
+
+      // Make API request
+      const response = await axios.post('https://api.allvotesgh.com/admin/events/login', {
         email: email,
         password: password,
       });
 
-      console.log(response.data)
 
-      if (email === 'codingbakelvin@gmail.com') {
-        // Set encrypted user data in cookie
-        await setEncryptedUserDataCookie(email);
-        // Redirect to /dashboard for codingbagh@gmail.com
-        router.push('/dashboard');
-          setorgemail(email)
-          return
+
+      // Handle successful login (check for successful message or condition)
+      if (response.data && response.data.message === 'Admin authenticated successfully') {
+        if (email === 'codingbakelvin@gmail.com') {
+          await setEncryptedUserDataCookie(email);
+          setorgemail(email);
+          router.push('/dashboard');
+        } else {
+          await setEncryptedUserDataCookie(email);
+          await setOrgId(response.data.adminId);
+          await setorgemail(email);
+          router.push('/organizer');
+        }
       } else {
-        // Set encrypted user data in cookie
-        console.log()
-     await  setEncryptedUserDataCookie(email);
-     await setOrgId(response.data.adminId)
-        // Redirect to /organizer for other emails
-        router.push('/organizer');
-        setorgemail(email)
-        return
+        throw new Error('Invalid login credentials');
       }
+    } catch (error) {
+      console.error('Login error occurred:', error);  // Log the error details
 
-    }catch (error) {
-      // Handle login error by showing a modal
-      Modal.error({
-        title: 'Login Error',
-        content: 'Email or password is not correct.',
-      });
+      // Check if error has a response object (server response)
+      if (error.response) {
+        console.error('Error response:', error.response);  // Log the error response
+        Modal.error({
+          title: 'Login Error',
+          content: error.response.data.error || 'Email or password is not correct.',
+        });
+      }
+      // Check if error was during request (network issues, no response)
+      else if (error.request) {
+        console.error('No response from server:', error.request);
+        Modal.error({
+          title: 'Login Error',
+          content: 'No response from server. Please try again later.',
+        });
+      }
+      // Catch all other errors
+      else {
+        console.error('Unknown error:', error.message);
+        Modal.error({
+          title: 'Login Error',
+          content: 'An unknown error occurred. Please try again.',
+        });
+      }
     }
   };
-
 
   return (
     <div className="w-[100vw] flex flex-col ">

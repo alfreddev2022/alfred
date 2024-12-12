@@ -56,7 +56,7 @@ useEffect(() => {
 }, []);
 
 const filtedNom = nomineeSlug.filter(e=> e.organizerid==organizerid)
-console.log(filtedNom)
+
 const nLength = (cName)=>{
 const filtN = filtedNom.filter(e=>e.category==cName)
 return filtN.length
