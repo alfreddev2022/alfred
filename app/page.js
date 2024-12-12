@@ -119,11 +119,11 @@ const Page = () => {
 
             <div key={eventData.id} className='sm:w-[29vw]   transform transition-transform duration-300 sm:hover:scale-[106%]  overflow-hidden border rounded-lg h-[27rem]   hover:shadow-xl  items-center   p-0 '>
 
-              <Link href={`slug/${eventData.id}`}> <img ref={ref} src={getImageUrl(eventData.id)} alt={`Event ${eventData.id}`} className='w-full min-h-[20rem] max-h-[14rem] min-h-[20rem]' /> </Link>
-              <div className='flex  flex-col  w-full bg-[white] font-[500] text-[#02040F] p-4 '>
+              <Link href={`slug/${eventData.id}`}> <img ref={ref} src={getImageUrl(eventData.id)} alt={`Event ${eventData.id}`} className='w-full min-h-[20rem] max-h-[14rem] min-h-[20rem] ' /> </Link>
+              <div className='flex  flex-col  w-full bg-[white] font-[500] text-[#02040F]  '>
                 <Link href={`slug/${eventData.id}`} className="w-full p-4 text-center font-bold "><p>{eventData.name}</p> </Link>
 
-                <div className='flex gap-0'>    <Link href={`slug/${eventData.id}`} className="w-full text-center  font-[400]  "><p>starting: {eventData.date}</p> </Link>
+                <div className='flex gap-0 pb-4'>    <Link href={`slug/${eventData.id}`} className="w-full text-center  font-[400]  "><p>starting: {eventData.date}</p> </Link>
                   <Link href={`slug/${eventData.id}`} className="w-full  text-center  font-[400]  "><p className='text-[#DA4167]'>Ending: {eventData.expired}  </p> </Link>
                 </div>
 
