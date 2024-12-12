@@ -86,7 +86,7 @@ const getDecryptedUserDataFromCookie =  () => {
  useEffect(() => {
 
     axios
-      .get("http://localhost:3004/organizer")
+      .get("https://api.allvotesgh.com/organizer")
       .then((response) => {
        setCategory(response.data.events);
 

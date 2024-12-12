@@ -26,15 +26,15 @@ const [events,setEvents] = useState([])
   useEffect(() => {
     // Fetch products data from the server
     axios
-      .get("http://localhost:3004/admin/events")
+      .get("https://api.allvotesgh.com/admin/events")
       .then((response) => {
-     
+
         setEvents(response.data.events[0])
         setImages(response.data.events[1]);
-  
-      
-      
-       
+
+
+
+
       })
       .catch((error) => {
         console.error("Error fetching events:", error);
@@ -51,12 +51,12 @@ const [events,setEvents] = useState([])
       const startIndex = (currentPage - 1) * EventsPerPage;
       const endIndex = startIndex + EventsPerPage;
       const eventsToShow = eventData.slice(startIndex, endIndex);
-    
+
       // Function to handle page change
       const handlePageChange = (pageNumber) => {
         setCurrentPage(pageNumber);
       };
-      
+
   return (
     <div id={style.mainContainer} className='w-[100vw] flex flex-col items-center gap-10  overflow-x-hidden md:pb-6'>
 
@@ -133,7 +133,7 @@ const [events,setEvents] = useState([])
         </div>
         <h3>0202752828/0201357519</h3>
         <a href='mailto:eventvote@gmail.com'>eventvote@gmail.com</a>
-    </div>    
+      </div>
     </div>
   );
 };

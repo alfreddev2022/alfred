@@ -14,10 +14,10 @@ const page = ({params}) => {
   const [nomineeSlug, setNominee] = useState([])
   useEffect(() => {
     axios
-      .get("http://localhost:3004/organizer/nominee")
+      .get("https://api.allvotesgh.com/organizer/nominee")
       .then((response) => {
         setNominee(response.data.nominees[0]);
-   
+
 
       })
       .catch((error) => {
@@ -48,14 +48,14 @@ const page = ({params}) => {
            <Link className='h-14 w-[15rem] flex justify-between items-center border border-[gray] border-opacity-0.4 border-l-0 border-r-0 border-t-0 ' href={"#"} ><li id={style.linksElement} className='text-sm hover:text-[orangered]'>ABOUT</li> <IoIosArrowForward size={30} /> </Link>
            <Link className='h-14 w-[15rem] flex justify-between items-center border border-[gray] border-opacity-0.4 border-l-0 border-r-0 border-t-0 ' href={"#"} ><li id={style.linksElement} className='text-sm hover:text-[orangered]'>CONTACT US</li> <IoIosArrowForward size={30} /> </Link>
            <Link className='h-14 w-[15rem] flex justify-between items-center border border-[gray] border-opacity-0.4 border-l-0 border-r-0 border-t-0 ' href={"#"} ><li id={style.linksElement} className='text-sm hover:text-[orangered]'>RESULTS</li> <IoIosArrowForward size={30} /> </Link>
-           
+
          </ul>
       )}
-        
+
         <div className=" w-[90vw] h-[auto] overflow-hidden mt-20">
           <Resultchart params={nom}/>
         </div>
-    
+
     </div>
   )
 }

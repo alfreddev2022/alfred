@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
     const [events, setEvents] = useState([]);
     const [orgemail,setorgemial]=useState("")
    useEffect(()=>{axios
-      .get("http://localhost:3004/admin/events")
+     .get("https://api.allvotesgh.com/admin/events")
       .then((response) => {
         setEvents(response.data.events);
       })

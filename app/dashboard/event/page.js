@@ -95,7 +95,7 @@ console.log(image)
       };
 
       // Make POST request to add event data
-      const response = await axios.post("http://localhost:3004/admin/events", eventData);
+      const response = await axios.post("https://api.allvotesgh.com/admin/events", eventData);
 
       const formdata = new FormData();
 
@@ -106,7 +106,7 @@ console.log(image)
 
 
       // Make a POST request to upload file data using FormData
-      const filesend = await axios.post('http://localhost:3004/admin/file', formdata, {
+      const filesend = await axios.post('https://api.allvotesgh.com/admin/file', formdata, {
         headers: {
           'Content-Type': 'multipart/form-data', // Set content type for FormData
         },
@@ -140,7 +140,7 @@ console.log(image)
       content: "Are you sure you want to delete this event?",
       onOk() {
         axios
-          .delete(`http://localhost:3004/admin/events/${id}`)
+          .delete(`https://api.allvotesgh.com/admin/events/${id}`)
           .then((response) => {
 
             setProducts(products.filter((product) => product.id !== id));
@@ -162,7 +162,7 @@ console.log(image)
   const handleEditSubmit = () => {
     setIsLoading(true)
     axios
-      .put(`http://localhost:3004/admin/events/${formData.id}`, formData)
+      .put(`https://api.allvotesgh.com/admin/events/${formData.id}`, formData)
       .then((response) => {
 
         setEditModalOpen(false);
