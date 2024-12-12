@@ -37,10 +37,13 @@ const page = ({params}) => {
   const [nomineeSlug, setNominee] = useState([]);
 
   const getImageUrl = (id) => {
-    const image = images.filter(img => img.metadata.name.split('/')[1].split('.')[0] === id);
-    return image[0] && image[0].url;
+    if (!id || !images.length) return null; // Guard clause
+    const image = images.find(img => {
+      const nameParts = img.metadata?.name?.split('/');
+      return nameParts?.[1]?.split('.')[0] === id;
+    });
+    return image?.url || null;
   };
-
   const eventfilter = events.filter(e => e.id == ids[1]);
   const cost = eventfilter[0] && parseFloat(eventfilter[0].cost) * parseFloat(votes);
 
@@ -76,18 +79,7 @@ const page = ({params}) => {
     }
   };
 
-  useEffect(() => {
-    axios
-      .get("https://api.allvotesgh.com/admin/events")
-      .then((response) => {
-        setEvents(response.data.events[0]);
-        setImages(response.data.events[1]);
-        console.log(response.data.events[0]);
-      })
-      .catch((error) => {
-        console.error("Error fetching events:", error);
-      });
-  }, []);
+
 
   const reload = async () => {
     axios
@@ -95,7 +87,7 @@ const page = ({params}) => {
       .then((response) => {
         setNominee(response.data.nominees[0]);
         setImages(response.data.nominees[1]);
-        console.log(response.data.nominees[0]);
+
       })
       .catch((error) => {
         console.error("Error fetching products:", error);
@@ -103,16 +95,23 @@ const page = ({params}) => {
   }
 
   useEffect(() => {
-    axios
-      .get("https://api.allvotesgh.com/organizer/nominee")
-      .then((response) => {
-        setNominee(response.data.nominees[0]);
-        setImages(response.data.nominees[1]);
-        console.log(response.data.nominees[0]);
-      })
-      .catch((error) => {
-        console.error("Error fetching products:", error);
-      });
+    const fetchData = async () => {
+      try {
+        // Fetch events data
+        const eventResponse = await axios.get("https://api.allvotesgh.com/admin/events");
+        setEvents(eventResponse.data.events[0]);
+        setImages(eventResponse.data.events[1]);
+
+        // Fetch nominees data
+        const nomineeResponse = await axios.get("https://api.allvotesgh.com/organizer/nominee");
+        setNominee(nomineeResponse.data.nominees[0]);
+        setImages(nomineeResponse.data.nominees[1]);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
   }, []);
 
   const toggleMenu = () => {
@@ -154,8 +153,12 @@ const page = ({params}) => {
                 )}
       <div id={style.cardContainer} className='w-[100vw]  px-20 mt-[20vh] flex justify-around items-center gap-4'>
         <div id={style.firstCard} className='flex flex-col justify-center items-start  h-[100vh] gap-4'>
-          <img src={getImageUrl(nomineeSlugFilter[0] && nomineeSlugFilter[0].id)} alt='Image'
-               id={style.image} className='w-[25rem] h-[30rem]'/>
+          <img
+            src={getImageUrl(nomineeSlugFilter[0]?.id) || "/path/to/placeholder.jpg"}
+            alt="Nominee Image"
+            id={style.image}
+            className='w-[25rem] h-[30rem]'
+          />
                <section>
                  <h2 className='text-[1.5em] font-[600]'>{nomineeSlugFilter[0]&&nomineeSlugFilter[0].name}</h2>
                  <h4 className='text-[1.2em] font-[500]'>{nomineeSlugFilter[0]&&nomineeSlugFilter[0].category}</h4>

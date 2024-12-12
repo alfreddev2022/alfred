@@ -82,8 +82,8 @@ const [images,setImages]=useState([])
 
              {
 
-              nomineeSlugFilter.map(n=><div key={n.id} className=' w-[12vw] flex flex-col items-center border-2 m-4 border-gray rounded-md'>
-                <img src={getImageUrl(n.id)} alt='image' className='w-[12vw]  h-[14rem]'/>
+              nomineeSlugFilter.map(n => <div key={n.id} className=' sm:w-[12vw] flex flex-col items-center border-2 m-4 border-gray rounded-md'>
+                <img src={getImageUrl(n.id)} alt='image' className='sm:w-[12vw]  h-[14rem]' />
                 <section className='flex flex-col items-center text-[1.1em] font-[600] bg-[#F9C784] w-full p-2' >
                   <span className="text-[#F24C00] text-xl mb-2">{n.name}</span>
                   <span className='mt-[-1vh]'>{n.code}</span>
