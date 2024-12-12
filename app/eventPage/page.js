@@ -9,7 +9,7 @@ import FaceIcon from "../../public/facebook.png";
 import InstaIcon from "../../public/instagram.gif";
 import WhatIcon from "../../public/whatsapp.png";
 import TwitIcon from "../../public/twitter.png";
-import Votes from '../../public/Votes.jpg'
+import Votes from '../../public/votes.jpg'
 import style from '../../styles/app.module.scss'
 
 export default function Home() {
