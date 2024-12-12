@@ -12,7 +12,7 @@ import style from '/styles/eventPage.module.scss';
 import axios from 'axios';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
-import vote from '../public/vote.jpg'
+import votes from '../public/vote.jpg'
 
 const EventsPerPage = 15;
 
@@ -59,7 +59,7 @@ const Page = () => {
       {/* Navbar */}
       <nav id={style.navContainer} className="flex justify-between z-10 w-full px-8 bg-[#02040F] items-center fixed">
         <Link href={'/eventPage'} id={style.linksElement} className="text-lg py-6 px-4 text-[#E7E7E7] flex items-center font-light">
-          All Votes <Image alt="logo" src={vote} width="40" height="40" className="rounded-full" />
+          All Votes <Image alt="logo" src={votes} width="40" height="40" className="rounded-full" />
         </Link>
         <ul id={style.navLink} className="flex items-center gap-10 text-white">
           <Link href={"/eventPage"}><li className="text-sm hover:text-[#F24C00]">Home</li></Link>
@@ -92,8 +92,9 @@ const Page = () => {
 
       {/* Event Cards */}
       <div className="w-full px-4 py-28 flex flex-wrap gap-4 justify-center">
+        {/* Show event cards in a row on large screens and stack them on small screens */}
         {!loading && eventsToShow.map((event) => (
-          <div key={event.id} className="w-[29vw] border rounded-lg h-[27rem] hover:shadow-xl transition-all transform hover:scale-105">
+          <div key={event.id} className="w-full sm:w-[29vw] md:w-[29vw] lg:w-[29vw] border rounded-lg h-[27rem] hover:shadow-xl transition-all transform hover:scale-105">
             <Link href={`/slug/${event.id}`}>
               <img src={getImageUrl(event.id)} alt={`Event ${event.name}`} className="w-full h-[20rem] object-cover" />
             </Link>
