@@ -9,7 +9,7 @@ import FaceIcon from "../public/facebook.png";
 import InstaIcon from "../public/instagram.gif";
 import WhatIcon from "../public/whatsapp.png";
 import TwitIcon from "../public/twitter.png";
-import Vote from '../public/VOTE.jpg' 
+import Vote from '../public/VOTE.jpg'
 import style from '../styles/app.module.scss'
 
 export default function Home() {
@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <main className="w-[100vw] flex flex-col text-black ">
       <nav id={style.navContainer} className="flex  justify-between w-[100vw] md:px-20 bg-[#F2EFEA] items-center fixed">
-                <Link href={'http://localhost:3000/eventPage'} id={style.linksElement} className="text-lg py-6 px-4"> Events</Link>
+        <Link href={'/eventPage'} id={style.linksElement} className="text-lg py-6 px-4"> Events</Link>
                 <ul id={style.navLink} className="flex justify-center gap-10 ml-[6em]">
                   <Link href={"#"} ><li id={style.linksElement} className='text-sm hover:text-[orangered]'>HOME</li> </Link>
                   <Link href={"#"} ><li id={style.linksElement} className='text-sm hover:text-[orangered]'>ABOUT</li> </Link>
@@ -39,10 +39,10 @@ export default function Home() {
                      <Link className='h-14 w-[15rem] flex justify-between items-center border border-[gray] border-opacity-0.4 border-l-0 border-r-0 border-t-0 ' href={"#"} ><li id={style.linksElement} className='text-sm hover:text-[orangered]'>ABOUT</li> <IoIosArrowForward size={30} /> </Link>
                      <Link className='h-14 w-[15rem] flex justify-between items-center border border-[gray] border-opacity-0.4 border-l-0 border-r-0 border-t-0 ' href={"#"} ><li id={style.linksElement} className='text-sm hover:text-[orangered]'>CONTACT US</li> <IoIosArrowForward size={30} /> </Link>
                      <Link className='h-14 w-[15rem] flex justify-between items-center border border-[gray] border-opacity-0.4 border-l-0 border-r-0 border-t-0 ' href={"#"} ><li id={style.linksElement} className='text-sm hover:text-[orangered]'>RESULTS</li> <IoIosArrowForward size={30} /> </Link>
-                     
+
                    </ul>
-        )}     
-      
+      )}
+
       <div className="py-20 flex flex-col  justify-center items-center">
         <div className="lg:flex lg:flex-row-reverse lg:px-20">
           <Image src={Vote} className=" lg:w-[50vw]"/>
@@ -82,7 +82,7 @@ export default function Home() {
         </div>
         <h3>0202752828/0201357519</h3>
         <a href='mailto:eventvote@gmail.com'>eventvote@gmail.com</a>
-    </section>        
+        </section>
 
       </div>
     </main>
