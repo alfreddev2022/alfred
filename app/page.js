@@ -81,7 +81,7 @@ const Page = () => {
           <Link href={"/nomination"} ><li id={style.linksElement} className='text-sm hover:text-[orangered]'>NOMINATIONS</li> </Link>
         </ul>
 
-        <div id={style.search} className="py-6 ml-[-2rem] items-center  flex gap-4 ">
+        <div id={style.search} className="py-6 sm:ml-[-2rem] items-center  flex gap-4 ">
           <input
             className="outline-none w-[400px] h-8 px-2 py-2 rounded"
             type="search"
@@ -94,7 +94,7 @@ const Page = () => {
             onClick={toggleMenu}>
             <IoMdMenu className='md:hidden' />
           </button>
-          <Link href={"/login"} ><div title="click here if you are an organizer to login" className='text-sm  text-white hover:text-[#F2EFEA] flex items-center justify-center bg-[#F24C00]  px-2 py-2 rounded-md shadow-md'>I am an Organizer</div> </Link>
+          <Link href={"/login"} className='hidden sm:block'><div title="click here if you are an organizer to login" className='text-sm  text-white hover:text-[#F2EFEA] flex items-center justify-center bg-[#F24C00]  px-2 py-2 rounded-md shadow-md'>I am an Organizer</div> </Link>
         </div>
 
 
