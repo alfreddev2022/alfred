@@ -111,13 +111,13 @@ const Page = () => {
       )}
 
       <div>
-        <div id={style.cardContainer} className="w-screen gap-8 h-screen items-center px-4  sm:items-start flex py-28 flex-col sm:flex-row flex-wrap  sm:px-20 ">
+        <div id={style.cardContainer} className="w-screen gap-4 h-screen items-center justify-center  px-4  sm:items-start flex py-28 flex-col sm:flex-row flex-wrap  sm:px-10 ">
 
 
 
           {!loading && eventsToShow.map(eventData => (
 
-            <div key={eventData.id} className='sm:w-[28vw]   transform transition-transform duration-300 sm:hover:scale-[106%]  overflow-hidden border rounded-lg h-[27rem]   hover:shadow-xl  items-center   p-0 '>
+            <div key={eventData.id} className='sm:w-[29vw]   transform transition-transform duration-300 sm:hover:scale-[106%]  overflow-hidden border rounded-lg h-[27rem]   hover:shadow-xl  items-center   p-0 '>
 
               <Link href={`slug/${eventData.id}`}> <img ref={ref} src={getImageUrl(eventData.id)} alt={`Event ${eventData.id}`} className='w-full min-h-[20rem] max-h-[14rem] min-h-[20rem]' /> </Link>
               <div className='flex  flex-col  w-full bg-[white] font-[500] text-[#02040F] p-4 '>
