@@ -106,10 +106,10 @@ const eventSlugFilter = eventSlug;
             <span></span>
           </section>
           <section id={style.inforDetails} className='flex flex-col justify-center gap-4'>
-            <h2 className='flex items-center justify-start gap-10 text-[1.1em] md:text-xlg '> <MdOutlineUpdate size={30}/>Starting Date: {eventSlugFilter[0]&&eventSlugFilter[0].date}   </h2>
+            <h2 className='flex  p-2 items-center justify-start gap-10 text-[1.1em] md:text-xlg '> <MdOutlineUpdate size={30} />Starting Date: {eventSlugFilter[0] && eventSlugFilter[0].date}   </h2>
 
-            <h2 className='flex items-center justify-start gap-10 text-[1.1em] md:text-xlg '> <FaCreativeCommonsPd size={30}/> Cost Per Vote: {eventSlugFilter[0]&&eventSlugFilter[0].cost}</h2>
-            <h2 className='flex items-center justify-start gap-10 text-[1.1em] md:text-xlg '> <BsCalendar2DateFill size={30}/> Closing Date: {eventSlugFilter[0]&&eventSlugFilter[0].expired}</h2>
+            <h2 className='flex p-2  items-center justify-start gap-10 text-[1.1em] md:text-xlg '> <FaCreativeCommonsPd size={30} /> Cost Per Vote: {eventSlugFilter[0] && eventSlugFilter[0].cost}</h2>
+            <h2 className='flex p-2 items-center justify-start gap-10 text-[1.1em] md:text-xlg '> <BsCalendar2DateFill size={30} /> Closing Date: {eventSlugFilter[0] && eventSlugFilter[0].expired}</h2>
           </section>
 
           <section id={style.infoBox} className='flex flex-col gap-4 items-center mt-5 '>
@@ -134,7 +134,7 @@ const eventSlugFilter = eventSlug;
                 <Image src={TwitIcon}  width={40} alt="Twitter Icon" />
               </div>
             </div>
-            <h3>0202752828/0201357519</h3>
+            <h3>0201367519/ 0551678667</h3>
             <a href='mailto:eventvote@gmail.com'>eventvote@gmail.com</a>
           </section>
         </div>}

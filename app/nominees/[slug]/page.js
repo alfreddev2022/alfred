@@ -82,9 +82,9 @@ const [images,setImages]=useState([])
 
              {
 
-              nomineeSlugFilter.map(n => <div key={n.id} className=' sm:w-[12vw] flex flex-col items-center border-2 m-4 border-gray rounded-md'>
+              nomineeSlugFilter.map(n => <div key={n.id} className=' sm:w-[12vw]  flex flex-col items-center border-2 m-4 border-gray rounded-md'>
                 <img src={getImageUrl(n.id)} alt='image' className='sm:w-[12vw]  h-[14rem]' />
-                <section className='flex flex-col items-center text-[1.1em] font-[600] bg-[#F9C784] w-full p-2' >
+                <section className='flex flex-col items-center text-[1.1em] font-[600] bg-[#F9C784] w-full p-2  ' >
                   <span className="text-[#F24C00] text-xl mb-2">{n.name}</span>
                   <span className='mt-[-1vh]'>{n.code}</span>
                   <Link href={`/specific_nominee/${n.id} ${n.organizerid}`}><button className='bg-[green] text-white font-[700] w-full h-8 rounded-[5px] px-2 '>Proceed To Vote</button></Link>
@@ -116,7 +116,7 @@ const [images,setImages]=useState([])
                 <Image id={style.icons} src={TwitIcon}  width={40} alt="Twitter Icon" />
               </div>
             </div>
-            <h3>0202752828/0201357519</h3>
+          <h3>0201367519/ 0551678667</h3>
             <a href='mailto:eventvote@gmail.com'>eventvote@gmail.com</a>
           </div>
         </div>

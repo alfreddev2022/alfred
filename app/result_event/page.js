@@ -131,7 +131,7 @@ const [events,setEvents] = useState([])
           <Image src={TwitIcon}  width={40} alt="Twitter Icon" />
         </div>
         </div>
-        <h3>0202752828/0201357519</h3>
+        <h3>0201367519/ 0551678667</h3>
         <a href='mailto:eventvote@gmail.com'>eventvote@gmail.com</a>
       </div>
     </div>
