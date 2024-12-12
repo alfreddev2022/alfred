@@ -52,7 +52,7 @@ const router = useRouter();
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post(`https://alrfredbc.onrender.com/admin/events/login`, {
+      const response = await axios.post(`https://api.allvotesgh.com/admin/events/login`, {
         email: email,
         password: password,
       });

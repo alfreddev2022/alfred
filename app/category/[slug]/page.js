@@ -44,7 +44,7 @@ console.log(paramArr)
      useEffect(() => {
        setorgid(getDecryptedUserDataFromCookie())
     axios
-      .get("https://4178h52b-3004.euw.devtunnels.ms/admin/events")
+      .get("https://api.allvotesgh.com/admin/events")
       .then((response) => {
 
 
@@ -56,7 +56,7 @@ console.log(paramArr)
       });
 
        axios
-         .get("https://4178h52b-3004.euw.devtunnels.ms/organizer")
+         .get("https://api.allvotesgh.com/organizer")
       .then((response) => {
 
 

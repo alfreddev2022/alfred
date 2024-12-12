@@ -7,7 +7,7 @@ export default function page() {
 
   const [voters,setVoters] = useState([])
 
-  const getVoters = () => axios.get("https://4178h52b-3004.euw.devtunnels.ms/organizer/getVotes").then(res => (setVoters(res.data.voterec), console.log(res.data.voterec)))
+  const getVoters = () => axios.get("https://api.allvotesgh.com/organizer/getVotes").then(res => (setVoters(res.data.voterec), console.log(res.data.voterec)))
 
   useEffect(()=>{getVoters()},[])
 
@@ -25,7 +25,7 @@ export default function page() {
   useEffect(() => {
     // Fetch products data from the server
     axios
-      .get("https://4178h52b-3004.euw.devtunnels.ms/admin/events")
+      .get("https://api.allvotesgh.com/admin/events")
       .then((response) => {
         setProducts(response.data.events[0]);
         setEvents(response.data.events[0])

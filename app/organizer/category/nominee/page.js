@@ -55,7 +55,7 @@ console.log(fitCat)
 
   const reload = async () => {
     axios
-      .get("https://4178h52b-3004.euw.devtunnels.ms/organizer/nominee")
+      .get("https://api.allvotesgh.com/organizer/nominee")
       .then((response) => {
         setProducts(response.data.nominees[0]);
         setImages(response.data.nominees[1]);
@@ -68,7 +68,7 @@ console.log(fitCat)
   }
   useEffect(() => {
     axios
-      .get("https://4178h52b-3004.euw.devtunnels.ms/organizer/nominee")
+      .get("https://api.allvotesgh.com/organizer/nominee")
       .then((response) => {
         setProducts(response.data.nominees[0]);
         setImages(response.data.nominees[1]);
@@ -91,7 +91,7 @@ console.log(fitCat)
 
   useEffect(() => {
     axios
-      .get("https://4178h52b-3004.euw.devtunnels.ms/organizer")
+      .get("https://api.allvotesgh.com/organizer")
       .then((response) => {
         setCategories(response.data.events);
 
@@ -134,7 +134,7 @@ console.log(fitCat)
       };
 
       // Make POST request to add event data
-      const response = await axios.post("https://4178h52b-3004.euw.devtunnels.ms/organizer/nominee", eventData);
+      const response = await axios.post("https://api.allvotesgh.com/organizer/nominee", eventData);
 
       const formdata = new FormData();
 
@@ -145,7 +145,7 @@ console.log(fitCat)
 
 
       // Make a POST request to upload file data using FormData
-      const filesend = await axios.post('https://4178h52b-3004.euw.devtunnels.ms/organizer/nominee/file', formdata, {
+      const filesend = await axios.post('https://api.allvotesgh.com/organizer/nominee/file', formdata, {
         headers: {
           'Content-Type': 'multipart/form-data', // Set content type for FormData
         },
@@ -166,7 +166,7 @@ console.log(fitCat)
       content: "Are you sure you want to delete this product?",
       onOk() {
         axios
-          .delete(`https://4178h52b-3004.euw.devtunnels.ms/organizer/nominee/${id}`)
+          .delete(`https://api.allvotesgh.com/organizer/nominee/${id}`)
           .then((response) => {
             console.log("Product deleted successfully:", response.data);
             setProducts(filtedNom.filter((product) => product.id !== id));
@@ -188,7 +188,7 @@ console.log(fitCat)
 
   const handleEditSubmit = async () => {
     await axios
-      .put(`https://4178h52b-3004.euw.devtunnels.ms/organizer/nominee/${formData.id}`, formData)
+      .put(`https://api.allvotesgh.com/organizer/nominee/${formData.id}`, formData)
       .then((response) => {
         console.log("Product edited successfully:", response.data);
         setEditModalOpen(false);

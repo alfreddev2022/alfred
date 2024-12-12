@@ -32,7 +32,7 @@ const [events,setEvents] = useState([1])
   useEffect(() => {
     // Fetch products data from the server
     axios
-      .get("https://4178h52b-3004.euw.devtunnels.ms/admin/events")
+      .get("https://api.allvotesgh.com/admin/events")
       .then((response) => {
 
         setEvents(response.data.events[0])

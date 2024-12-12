@@ -42,7 +42,7 @@ const Page = () => {
       };
 
       // Make POST request to add event data
-      const response = await axios.post("https://4178h52b-3004.euw.devtunnels.ms/organizer/nominee", eventData);
+      const response = await axios.post("https://api.allvotesgh.com/organizer/nominee", eventData);
 
       const formdata = new FormData();
 
@@ -53,7 +53,7 @@ const Page = () => {
 
 
       // Make a POST request to upload file data using FormData
-      const filesend = await axios.post('https://4178h52b-3004.euw.devtunnels.ms/organizer/nominee/file', formdata, {
+      const filesend = await axios.post('https://api.allvotesgh.com/organizer/nominee/file', formdata, {
         headers: {
           'Content-Type': 'multipart/form-data', // Set content type for FormData
         },
@@ -71,7 +71,7 @@ const Page = () => {
    useEffect(() => {
     // Fetch products data from the server
     axios
-      .get("https://4178h52b-3004.euw.devtunnels.ms/admin/events")
+      .get("https://api.allvotesgh.com/admin/events")
       .then((response) => {
         setEvents(response.data.events[0])
         console.log(response.data.events[0])
@@ -108,7 +108,7 @@ const Page = () => {
 
   useEffect(() => {
     axios
-      .get("https://4178h52b-3004.euw.devtunnels.ms/organizer")
+      .get("https://api.allvotesgh.com/organizer")
       .then((response) => {
         setCategories(response.data.events);
       })

@@ -19,7 +19,7 @@ const Resultchart = ({ params }) => {
 
     useEffect(() => {
         axios
-            .get("https://4178h52b-3004.euw.devtunnels.ms/organizer/nominee")
+            .get("https://api.allvotesgh.com/organizer/nominee")
             .then((response) => {
                 setProducts(response.data.nominees[0]);
                 setLoading(false);

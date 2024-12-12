@@ -26,7 +26,7 @@ const [images,setImages]=useState([])
     const [nomineeSlug,setNominee] =useState([])
     useEffect(() => {
     axios
-      .get("https://4178h52b-3004.euw.devtunnels.ms/organizer/nominee")
+      .get("https://api.allvotesgh.com/organizer/nominee")
       .then((response) => {
         setNominee(response.data.nominees[0]);
         setImages(response.data.nominees[1]);

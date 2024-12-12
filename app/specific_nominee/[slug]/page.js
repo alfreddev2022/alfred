@@ -48,7 +48,7 @@ const page = ({params}) => {
 
   const handleVote = async () => {
     try {
-      const response = await axios.post('https://4178h52b-3004.euw.devtunnels.ms/organizer/vote', {
+      const response = await axios.post('https://api.allvotesgh.com/organizer/vote', {
         nomineeId: ids[0],
         votes,
         phoneNumber,
@@ -58,7 +58,7 @@ const page = ({params}) => {
         cost
       });
 
-      await axios.post("https://4178h52b-3004.euw.devtunnels.ms/organizer/addVotes", {
+      await axios.post("https://api.allvotesgh.com/organizer/addVotes", {
         nomineeId: ids[0],
         votes,
         phoneNumber,
@@ -78,7 +78,7 @@ const page = ({params}) => {
 
   useEffect(() => {
     axios
-      .get("https://4178h52b-3004.euw.devtunnels.ms/admin/events")
+      .get("https://api.allvotesgh.com/admin/events")
       .then((response) => {
         setEvents(response.data.events[0]);
         setImages(response.data.events[1]);
@@ -91,7 +91,7 @@ const page = ({params}) => {
 
   const reload = async () => {
     axios
-      .get("https://4178h52b-3004.euw.devtunnels.ms/organizer/nominee")
+      .get("https://api.allvotesgh.com/organizer/nominee")
       .then((response) => {
         setNominee(response.data.nominees[0]);
         setImages(response.data.nominees[1]);
@@ -104,7 +104,7 @@ const page = ({params}) => {
 
   useEffect(() => {
     axios
-      .get("https://4178h52b-3004.euw.devtunnels.ms/organizer/nominee")
+      .get("https://api.allvotesgh.com/organizer/nominee")
       .then((response) => {
         setNominee(response.data.nominees[0]);
         setImages(response.data.nominees[1]);
