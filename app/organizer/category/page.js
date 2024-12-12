@@ -34,7 +34,7 @@ const Page = () => {
 const [organizerid, setOrganizerId] = useState("");
   const reload = async () => {
     axios
-      .get("https://rt2l8xpl-3004.uks1.devtunnels.ms/organizer/nominee")
+      .get("https://api.allvotesgh.com/organizer/nominee")
       .then((response) => {
         setNominee(response.data.nominees[0]);
         setImages(response.data.nominees[1]);
@@ -44,7 +44,7 @@ const [organizerid, setOrganizerId] = useState("");
 const [nomineeSlug,setNominee] =useState([])
 useEffect(() => {
   axios
-    .get("https://rt2l8xpl-3004.uks1.devtunnels.ms/organizer/nominee")
+    .get("https://api.allvotesgh.com/organizer/nominee")
     .then((response) => {
       setNominee(response.data.nominees[0]);
       setImages(response.data.nominees[1]);
@@ -80,7 +80,7 @@ return filtN.length
   useEffect(() => {
 
     axios
-      .get("https://rt2l8xpl-3004.uks1.devtunnels.ms/organizer")
+      .get("https://api.allvotesgh.com/organizer")
       .then((response) => {
         setProducts(response.data.events);
 
@@ -124,7 +124,7 @@ const handleAddItem = async () => {
     };
 
     // Make POST request to add event data
-    const response = await axios.post("https://rt2l8xpl-3004.uks1.devtunnels.ms/organizer", eventData);
+    const response = await axios.post("https://api.allvotesgh.com/organizer", eventData);
 
     setSuccessModalVisible(true);
   } catch (error) {
@@ -139,7 +139,7 @@ const handleAddItem = async () => {
       content: "Are you sure you want to delete this event?",
       onOk() {
      axios
-          .delete(`https://rt2l8xpl-3004.uks1.devtunnels.ms/organizer/${id}`)
+       .delete(`https://api.allvotesgh.com/organizer/${id}`)
           .then((response) => {
 
             setProducts(filteredCat.filter((product) => product.id !== id));
@@ -161,7 +161,7 @@ const handleAddItem = async () => {
 
   const handleEditSubmit = () => {
     axios
-      .put(`https://rt2l8xpl-3004.uks1.devtunnels.ms/organizer/${formData.id}`, {name:formData.category})
+      .put(`https://api.allvotesgh.com/organizer/${formData.id}`, { name: formData.category })
       .then((response) => {
 
         setEditModalOpen(false);

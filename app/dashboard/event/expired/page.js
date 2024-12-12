@@ -10,7 +10,7 @@ import moment from 'moment-timezone';
 import axios from "axios"
 const Page = () => {
   const [events,setEvents] = useState([])
-  
+
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editModalOpen, setEditModalOpen] = useState(false);
@@ -24,7 +24,7 @@ const Page = () => {
   useEffect(() => {
     // Fetch products data from the server
     axios
-      .get("https://rt2l8xpl-3004.uks1.devtunnels.ms/admin/events")
+      .get("https://api.allvotesgh.com/admin/events")
       .then((response) => {
         setEvents(response.data.events[0])
        console.log(response.data.events)
@@ -38,7 +38,7 @@ const Page = () => {
   const products = events.filter(e=>moment(currentDate).isAfter(e.expired));
   console.log(products)
 
- 
+
 
   const handleDelete = (id) => {
     Modal.confirm({
@@ -46,10 +46,10 @@ const Page = () => {
       content: "Are you sure you want to delete this product?",
       onOk() {
         axios
-          .delete(`https://rt2l8xpl-3004.uks1.devtunnels.ms/admin/events/${id}`)
+          .delete(`https://api.allvotesgh.com/admin/events/${id}`)
           .then((response) => {
             console.log("Product deleted successfully:", response.data);
-          
+
             setSuccessModalVisible(true);
           })
           .catch((error) => {
@@ -104,12 +104,12 @@ const Page = () => {
   return (
   <div className="p-4 pl-[12rem] pt-[7rem] ">
       <div className="container mx-auto">
-    
+
         <div className="mb-4 flex justify-between items-center">
-        
+
           <div className="flex gap-2">
-          
-          
+
+
             <CSVLink
               data={products}
               filename={"products.csv"}
@@ -145,7 +145,7 @@ const Page = () => {
                 <td className="px-4 py-2">{product.expired}</td>
                 <td className="px-4 py-2">¢{product.cost}</td>
                 <td className="px-4 py-2">
-                
+
                   <button
                     className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
                     onClick={() => handleDelete(product.id)}
@@ -171,8 +171,8 @@ const Page = () => {
           )}
         </div>
       </div>
-   
-    
+
+
       <Modal
         title="Error"
         visible={errorModalVisible}

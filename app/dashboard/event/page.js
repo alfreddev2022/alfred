@@ -10,7 +10,7 @@ import dynamic from 'next/dynamic'
 import axios from 'axios'
 
 const Page = () => {
-    
+
   const [products, setProducts] = useState([])
 
  const [events, setEvents] = useState([])
@@ -35,7 +35,7 @@ const Page = () => {
   useEffect(() => {
     // Fetch products data from the server
     axios
-      .get("https://rt2l8xpl-3004.uks1.devtunnels.ms/admin/events")
+      .get("https://api.allvotesgh.com/admin/events")
       .then((response) => {
         setProducts(response.data.events[0]);
         setEvents(response.data.events[0])
@@ -53,15 +53,15 @@ const Page = () => {
       [name]: value,
     });
 
- 
+
   };
 
   const handleFileChange = async(e) => {
-   
-   
+
+
   await setImage(e.target.files[0])
 console.log(image)
- 
+
 
   };
 
@@ -101,9 +101,9 @@ console.log(image)
 
       // Append the image file to the FormData object
       formdata.append('image', image);
-     
 
-     
+
+
 
       // Make a POST request to upload file data using FormData
       const filesend = await axios.post('http://localhost:3004/admin/file', formdata, {
@@ -142,7 +142,7 @@ console.log(image)
         axios
           .delete(`http://localhost:3004/admin/events/${id}`)
           .then((response) => {
-      
+
             setProducts(products.filter((product) => product.id !== id));
             setSuccessModalVisible(true);
           })
@@ -164,7 +164,7 @@ console.log(image)
     axios
       .put(`http://localhost:3004/admin/events/${formData.id}`, formData)
       .then((response) => {
-     
+
         setEditModalOpen(false);
         setSuccessModalVisible(true);
          setIsLoading(false)
@@ -201,7 +201,7 @@ console.log(image)
   return (
     <div className="p-4 pl-[12rem] pt-[7rem] ">
       <div className="container mx-auto">
-      
+
         <div className="mb-4 flex justify-between items-center">
           <div>
             <label className="mr-2">Filter by Category:</label>
@@ -220,7 +220,7 @@ console.log(image)
             >
               Add Item
             </Button>
-           
+
             <CSVLink
               data={products}
               filename={"products.csv"}
@@ -291,7 +291,7 @@ console.log(image)
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
           <div className="bg-white p-8 rounded-lg w-[50%]">
             <h2 className="text-2xl font-bold mb-4">Add New Event</h2>
-            
+
             <input
               type="text"
               name="name"
