@@ -12,6 +12,7 @@ import style from '/styles/eventPage.module.scss';
 import axios from 'axios';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
+import vote from '../public/vote.jpg'
 
 const EventsPerPage = 15;
 
@@ -58,7 +59,7 @@ const Page = () => {
       {/* Navbar */}
       <nav id={style.navContainer} className="flex justify-between z-10 w-full px-8 bg-[#02040F] items-center fixed">
         <Link href={'/eventPage'} id={style.linksElement} className="text-lg py-6 px-4 text-[#E7E7E7] flex items-center font-light">
-          All Votes <Image alt="logo" src="/vote.jpg" width="40" height="40" className="rounded-full" />
+          All Votes <Image alt="logo" src={vote} width="40" height="40" className="rounded-full" />
         </Link>
         <ul id={style.navLink} className="flex items-center gap-10 text-white">
           <Link href={"/eventPage"}><li className="text-sm hover:text-[#F24C00]">Home</li></Link>
