@@ -74,7 +74,7 @@ const Page = () => {
     <div id={style.mainContainer} className='w-[100vw] flex flex-col items-center gap-10  overflow-x-hidden '>
 
       <nav id={style.navContainer} className="flex   justify-between z-[99]  w-[100vw] px-8 bg-[#02040F] items-center fixed">
-        <Link href={'eventPage'} id={style.linksElement} className="text-lg py-6 px-4 text-[#E7E7E7]   "> ALLVOTES</Link>
+        <Link href={'eventPage'} id={style.linksElement} className="text-lg py-6 px-4 text-[#E7E7E7] flex flex-col-reverse text-sm items-center justify-center font-light   ">All Votes  <Image alt="" src="/vote.jpg" width="40" height="40" className='rounded-[50px]' /></Link>
         <ul id={style.navLink} className="flex justify-center items-center gap-10 ml-[6em] text-white">
           <Link href={"/eventPage"} ><li id={style.linksElement} className='text-sm hover:text-[orangered]'>Home</li> </Link>
 
