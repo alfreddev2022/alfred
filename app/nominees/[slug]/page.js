@@ -48,7 +48,7 @@ const Page = ({ params }) => {
       {/* Navbar */}
       <nav className="w-full flex justify-between px-8 bg-[#F2EFEA] items-center fixed z-10 shadow-md">
         <Link href="/eventPage" className="text-lg font-semibold py-6 px-4 hover:text-[orangered]">
-          Events
+          All Votes
         </Link>
         <ul className="hidden md:flex justify-center gap-10">
           <Link href="/"><li className="text-sm hover:text-[orangered]">HOME</li></Link>
@@ -64,6 +64,11 @@ const Page = ({ params }) => {
         <ul className="md:hidden flex flex-col items-center w-[70vw] h-screen fixed left-0 bg-[#F2EFEA] z-20">
           <Link href="/" className="h-14 w-full flex justify-between items-center px-4 border-b">
             <li className="text-sm hover:text-[orangered]">HOME</li>
+            <IoIosArrowForward size={30} />
+          </Link>
+
+          <Link href="/nomination" className="h-14 w-full flex justify-between items-center px-4 border-b">
+            <li className="text-sm hover:text-[orangered]">Nomination</li>
             <IoIosArrowForward size={30} />
           </Link>
           {/* Add more links here */}

@@ -59,7 +59,7 @@ const Page = () => {
       {/* Navbar */}
       <nav id={style.navContainer} className="flex justify-between z-20 w-full px-8 bg-[#02040F] items-center fixed">
         <Link href={'/eventPage'} id={style.linksElement} className="text-lg py-6 px-4 text-[#E7E7E7] flex items-center font-light">
-          All Votes <Image alt="logo" src={Votes} width="40" height="40" className="rounded-full" />
+          All Votes
         </Link>
         <ul id={style.navLink} className="flex items-center gap-10 text-white">
           <Link href={"/eventPage"}><li className="text-sm hover:text-[#F24C00]">Home</li></Link>
@@ -73,7 +73,7 @@ const Page = () => {
             onChange={(e) => setSearch(e.target.value)}
           />
           <button className="md:hidden text-[2em] pr-8" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            <IoMdMenu />
+            <IoMdMenu color='white' />
           </button>
           <Link href={"/login"} className='hidden sm:block'>
             <div className="text-sm text-white hover:text-[#F2EFEA] bg-[#F24C00] px-4 py-2 rounded-md shadow-md">I am an Organizer</div>

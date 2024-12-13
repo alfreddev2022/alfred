@@ -8,7 +8,7 @@
         flex-direction: row;
         justify-content: space-between;
         padding-left: 30px;
-        
+
         #linksElement{
             font-size: 17px;
         }
@@ -40,7 +40,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-        
+
         }
 
         #image{
@@ -119,7 +119,7 @@
         flex-direction: row;
         justify-content: space-between;
         padding-left: 30px;
-        
+
         #linksElement{
             font-size: 17px;
         }
@@ -171,8 +171,9 @@
     }
 
     #secondCard{
-        margin-top:-10vh;
-        width: 100vw;
+        margin-top:0vh;
+        width: 80vw;
+
 
         #inforDetails{
             gap: 4vh;

@@ -85,7 +85,7 @@ const eventSlugFilter = eventSlug;
       <div id={style.cardContainer} className='w-[100vw] h-[100vh] px-20  justify-around  flex items-center gap-4'>
    {!loading &&  <div id={style.firstCard} className='flex flex-col justify-center items-center  h-[100vh] gap-4'>
           <img src={getImageUrl()} alt='Image'
-              id={style.image} className='w-[25rem] rounded-full'/>
+            id={style.image} className='w-[25rem] rounded-sm' />
             <section id={style.firstCardText}>
              <h2 className='text-[1.5em] font-[600]'>{eventSlugFilter[0]&&eventSlugFilter[0].name}</h2>
             <h4 className='text-[1.2em] font-[500]'>{eventSlugFilter[0]&&eventSlugFilter[0].eventSub}</h4>
@@ -96,7 +96,7 @@ const eventSlugFilter = eventSlug;
              <Skeleton circle={true} height={200} width={200} />
               <Skeleton width={250} height={20} />
         </div>}
-        { !loading &&   <div id={style.secondCard} className='flex flex-col justify-center items-center pt-10 h-[100vh] gap-4'>
+        {!loading && <div id={style.secondCard} className='flex flex-col justify-center items-center pt-10 h-auto p-4  border-2  gap-4 m-4'>
           <h2 id={style.usdCode} className='text-[1.2em] font-[500]'>{eventSlugFilter[0]&&eventSlugFilter[0].code}</h2>
           <section className='flex justify-center items-center'>
             <h4 className='text-[1.2em] font-[900]'>INFORMATION</h4>
@@ -117,20 +117,7 @@ const eventSlugFilter = eventSlug;
             </div>
 
             <h2 id={style.getin} className='text-[1.3vw]'>Get In Touch</h2>
-            <div id={style.iconsContainer} className="flex gap-4">
-              <div>
-                <Image src={FaceIcon} width={40} alt="Facebook Icon" />
-              </div>
-              <div>
-                <Image src={InstaIcon}  width={40} alt="Instagram Icon" />
-              </div>
-              <div>
-                <Image src={WhatIcon}  width={40} alt="WhatsApp Icon" />
-              </div>
-              <div>
-                <Image src={TwitIcon}  width={40} alt="Twitter Icon" />
-              </div>
-            </div>
+
             <h3>0201367519/ 0551678667</h3>
             <a href='mailto:eventvote@gmail.com'>eventvote@gmail.com</a>
           </section>
