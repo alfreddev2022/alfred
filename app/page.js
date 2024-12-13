@@ -57,7 +57,7 @@ const Page = () => {
   return (
     <div id={style.mainContainer} className="w-full flex flex-col items-center gap-10 overflow-x-hidden">
       {/* Navbar */}
-      <nav id={style.navContainer} className="flex justify-between z-10 w-full px-8 bg-[#02040F] items-center fixed">
+      <nav id={style.navContainer} className="flex justify-between z-20 w-full px-8 bg-[#02040F] items-center fixed">
         <Link href={'/eventPage'} id={style.linksElement} className="text-lg py-6 px-4 text-[#E7E7E7] flex items-center font-light">
           All Votes <Image alt="logo" src={Votes} width="40" height="40" className="rounded-full" />
         </Link>
@@ -82,11 +82,11 @@ const Page = () => {
       </nav>
 
       {isMenuOpen && (
-        <ul className="md:hidden flex flex-col items-center w-full h-screen pt-4 bg-[#F2EFEA]">
-          <Link href="#"><li className="h-14 w-full flex justify-between items-center border-b p-4">Home <IoIosArrowForward size={20} /></li></Link>
-          <Link href="#"><li className="h-14 w-full flex justify-between items-center border-b p-4">About Us <IoIosArrowForward size={20} /></li></Link>
-          <Link href="#"><li className="h-14 w-full flex justify-between items-center border-b p-4">Contact Us <IoIosArrowForward size={20} /></li></Link>
-          <Link href="#"><li className="h-14 w-full flex justify-between items-center border-b p-4">Nominations <IoIosArrowForward size={20} /></li></Link>
+        <ul className="md:hidden flex flex-col items-center w-[70vw] h-[100vh] pt-4 z-[999] fixed left-[0vw] bg-[#F2EFEA]">
+          <Link className='h-14 w-[15rem] flex justify-between items-center border border-[gray] border-opacity-0.4 border-l-0 border-r-0 border-t-0 ' href={"#"} ><li id={style.linksElement} className='text-sm hover:text-[orangered]'>HOME</li> <IoIosArrowForward size={30} /> </Link>
+          <Link className='h-14 w-[15rem] flex justify-between items-center border border-[gray] border-opacity-0.4 border-l-0 border-r-0 border-t-0 ' href={"#"} ><li id={style.linksElement} className='text-sm hover:text-[orangered]'>ABOUT</li> <IoIosArrowForward size={30} /> </Link>
+          <Link className='h-14 w-[15rem] flex justify-between items-center border border-[gray] border-opacity-0.4 border-l-0 border-r-0 border-t-0 ' href={"/nomination"} ><li id={style.linksElement} className='text-sm hover:text-[orangered]'>Nomination</li> <IoIosArrowForward size={30} /> </Link>
+          <Link className='h-14 w-[15rem] flex justify-between items-center border border-[gray] border-opacity-0.4 border-l-0 border-r-0 border-t-0 ' href={"#"} ><li id={style.linksElement} className='text-sm hover:text-[orangered]'>RESULTS</li> <IoIosArrowForward size={30} /> </Link>
         </ul>
       )}
 
