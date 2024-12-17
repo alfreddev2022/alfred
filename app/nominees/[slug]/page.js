@@ -33,7 +33,9 @@ const Page = ({ params }) => {
   }, []);
 
   const nomineeSlugFilter = nomineeSlug.filter(
-    (n) => n.organizerid && n.organizerid === slug.split('%2C')[1]
+    (n) => { return n.category == slug.split('%2C')[0].split('%20').join(' ') && n.organizerid === slug.split('%2C')[1] }
+
+
   );
 
   const getImageUrl = (id) => {
