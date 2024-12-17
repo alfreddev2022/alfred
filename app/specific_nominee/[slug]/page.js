@@ -118,8 +118,8 @@ const page = ({params}) => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const handlePaymentSuccess = () => {
-    handleVote();
+  const handlePaymentSuccess = async () => {
+    await handleVote();
   };
 
   const handlePaymentClose = () => {
