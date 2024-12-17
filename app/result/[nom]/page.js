@@ -29,27 +29,24 @@ const page = ({params}) => {
   };
   return (
     <div id={style.mainContainer} className='w-[100vw] lg:px-20 pb-20 flex flex-col items-center lg:gap-8 overflow-hidden'>
-    <nav id={style.navContainer} className="flex  justify-between w-[100vw] px-8 bg-[#F2EFEA] items-center fixed">
-      <Link href={'http://localhost:3000/eventPage'} id={style.linksElement} className="text-lg py-6 px-4"> Events</Link>
-      <ul id={style.navLink} className="flex justify-center gap-10 ml-[6em]">
-        <Link href={"#"} ><li id={style.linksElement} className='text-sm hover:text-[orangered]'>HOME</li> </Link>
-        <Link href={"#"} ><li id={style.linksElement} className='text-sm hover:text-[orangered]'>ABOUT</li> </Link>
-        <Link href={"#"} ><li id={style.linksElement} className='text-sm hover:text-[orangered]'>CONTACT</li> </Link>
-        <button
-          className="md:hidden text-xl p-4 focus:outline-none"
-          onClick={toggleMenu}>
-          <IoMdMenu className='md:hidden'/>
-        </button>
-      </ul>
-    </nav>
-    {isMenuOpen && (
-         <ul className="md:hidden flex flex-col items-center w-[70vw] h-[100vh] pt-4 z-[999] fixed left-[0vw] bg-[#F2EFEA]">
-           <Link className='h-14 w-[15rem] flex justify-between items-center border border-[gray] border-opacity-0.4 border-l-0 border-r-0 border-t-0 ' href={"#"} ><li id={style.linksElement} className='text-sm hover:text-[orangered]'>HOME</li> <IoIosArrowForward size={30} /> </Link>
-           <Link className='h-14 w-[15rem] flex justify-between items-center border border-[gray] border-opacity-0.4 border-l-0 border-r-0 border-t-0 ' href={"#"} ><li id={style.linksElement} className='text-sm hover:text-[orangered]'>ABOUT</li> <IoIosArrowForward size={30} /> </Link>
-           <Link className='h-14 w-[15rem] flex justify-between items-center border border-[gray] border-opacity-0.4 border-l-0 border-r-0 border-t-0 ' href={"#"} ><li id={style.linksElement} className='text-sm hover:text-[orangered]'>CONTACT US</li> <IoIosArrowForward size={30} /> </Link>
-           <Link className='h-14 w-[15rem] flex justify-between items-center border border-[gray] border-opacity-0.4 border-l-0 border-r-0 border-t-0 ' href={"#"} ><li id={style.linksElement} className='text-sm hover:text-[orangered]'>RESULTS</li> <IoIosArrowForward size={30} /> </Link>
+      <nav id={style.navContainer} className="flex justify-between z-20 w-full px-8 bg-[#02040F] items-center fixed">
+        <Link href={'/eventPage'} id={style.linksElement} className="text-lg py-6 px-4 text-[#E7E7E7] flex items-center font-light">
+          All Votes
+        </Link>
+        <ul id={style.navLink} className="flex items-center gap-10 text-white">
+          <Link href={"/eventPage"}><li className="text-sm hover:text-[#F24C00]">Home</li></Link>
+          <Link href={"/nomination"}><li className="text-sm hover:text-[#F24C00]">Nominations</li></Link>
+        </ul>
 
-         </ul>
+      </nav>
+
+      {isMenuOpen && (
+        <ul className="md:hidden flex flex-col items-center w-[70vw] h-[100vh] pt-4 z-[999] fixed left-[0vw] bg-[#F2EFEA]">
+          <Link className='h-14 w-[15rem] flex justify-between items-center border border-[gray] border-opacity-0.4 border-l-0 border-r-0 border-t-0 ' href={"#"} ><li id={style.linksElement} className='text-sm hover:text-[orangered]'>HOME</li> <IoIosArrowForward size={30} /> </Link>
+          <Link className='h-14 w-[15rem] flex justify-between items-center border border-[gray] border-opacity-0.4 border-l-0 border-r-0 border-t-0 ' href={"#"} ><li id={style.linksElement} className='text-sm hover:text-[orangered]'>ABOUT</li> <IoIosArrowForward size={30} /> </Link>
+          <Link className='h-14 w-[15rem] flex justify-between items-center border border-[gray] border-opacity-0.4 border-l-0 border-r-0 border-t-0 ' href={"/nomination"} ><li id={style.linksElement} className='text-sm hover:text-[orangered]'>Nomination</li> <IoIosArrowForward size={30} /> </Link>
+          <Link className='h-14 w-[15rem] flex justify-between items-center border border-[gray] border-opacity-0.4 border-l-0 border-r-0 border-t-0 ' href={"#"} ><li id={style.linksElement} className='text-sm hover:text-[orangered]'>RESULTS</li> <IoIosArrowForward size={30} /> </Link>
+        </ul>
       )}
 
         <div className=" w-[90vw] h-[auto] overflow-hidden mt-20">
