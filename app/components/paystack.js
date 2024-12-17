@@ -7,7 +7,7 @@ const PaystackPayment = ({ amount, email, onSuccess, onClose }) => {
               reference: (new Date()).getTime().toString(),
               email,
               amount: amount * 100, // Convert amount to kobo
-              publicKey: 'pk_test_abc8e30b8010cc2ac5caff9662ead863030d3d5f',
+              publicKey: 'pk_live_018c992782eb52e9e64948200a746125cc311135',
 
        };
 
