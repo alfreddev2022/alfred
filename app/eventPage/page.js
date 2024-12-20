@@ -66,22 +66,9 @@ export default function Home() {
 
         <section className='flex flex-col gap-2 items-center  h-[20vh] lg:h-[auto] '>
           <h2 className='text-[1.3em]'>Get In Touch</h2>
-          <div className="flex gap-4">
-            <div>
-              <Image src={FaceIcon} width={40} alt="Facebook Icon" />
-            </div>
-            <div>
-              <Image src={InstaIcon} width={40} alt="Instagram Icon" />
-            </div>
-            <div>
-              <Image src={WhatIcon} width={40} alt="WhatsApp Icon" />
-            </div>
-            <div>
-              <Image src={TwitIcon} width={40} alt="Twitter Icon" />
-            </div>
-          </div>
+
           <h3>0201367519/ 0551678667</h3>
-          <a href='mailto:eventvote@gmail.com'>eventvote@gmail.com</a>
+          <a href='mailto:allvotesghana@gmail.com'>allvotesghana@gmail.com</a>
         </section>
 
       </div>
