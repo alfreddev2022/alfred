@@ -119,7 +119,8 @@ const page = ({params}) => {
   };
 
   const handlePaymentSuccess = async () => {
-    await handleVote();
+
+    // await handleVote();
   };
 
   const handlePaymentClose = () => {
