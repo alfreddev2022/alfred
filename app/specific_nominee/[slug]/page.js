@@ -152,35 +152,36 @@ const page = ({params}) => {
 
                    </ul>
                 )}
-      <div id={style.cardContainer} className='w-[100vw]  px-20 mt-[20vh] flex justify-around items-center gap-4'>
-        <div id={style.firstCard} className='flex flex-col justify-center items-start  h-[100vh] gap-4'>
+      <div id={style.cardContainer} className='w-[100vw]  sm:px-20 mt-[20vh] flex justify-around items-center gap-4'>
+        <div id={style.firstCard} className="flex flex-col justify-center items-start h-auto md:h-[100vh] gap-4 ">
           <img
             src={getImageUrl(nomineeSlugFilter[0]?.id) || "/path/to/placeholder.jpg"}
             alt="Nominee Image"
             id={style.image}
-            className='w-[25rem] h-[30rem]'
+            className=" h-auto sm:w-[25rem] sm:h-[30rem] object-cover"
           />
-               <section>
-                 <h2 className='text-[1.5em] font-[600]'>{nomineeSlugFilter[0]&&nomineeSlugFilter[0].name}</h2>
-                 <h4 className='text-[1.2em] font-[500]'>{nomineeSlugFilter[0]&&nomineeSlugFilter[0].category}</h4>
-                 <h4 className='text-[1.2em] font-[500]'>{nomineeSlugFilter[0]&&nomineeSlugFilter[0].code}</h4>
-               </section>
+          <section>
+            <h2 className="text-[1.5em] font-[600]">{nomineeSlugFilter[0]?.name}</h2>
+            <h4 className="text-[1.2em] font-[500]">{nomineeSlugFilter[0]?.category}</h4>
+            <h4 className="text-[1.2em] font-[500]">{nomineeSlugFilter[0]?.code}</h4>
+          </section>
         </div>
+
         <div id={style.secondCard} className='flex flex-col justify-center items-center pt-10 h-[100vh] gap-4'>
             <h4 className='text-[2em] text-[purple] font-[500]'>Vote</h4>
-          <section id={style.inputBox} className='flex flex-col justify-center gap-4'>
-            <h2 className='flex items-center gap-4 text-[1.1em]'> <RiNumbersFill size={30} />
+          <section id={style.inputBox} className='flex flex-col justify-center gap-4 border p-2'>
+            <h2 className='flex items-center gap-4 text-[1.1em] border p-2'> <RiNumbersFill size={30} />
               <input
                 type="number"
                 value={votes}
                 onChange={(e) => setVotes(e.target.value)}
                 className=" bg-white rounded-[5px]
-               h-[6vh] w-[15vw] text-gray text-[1.2vw]   px-2 leading-tight outline-none"
+               h-[6vh] w-[15vw] text-gray text-[1.2vw]   px-2 leading-tight outline-none "
                 placeholder='Number Of Votes*'
                 required
               />
             </h2>
-            <h2 className='flex items-center gap-4 text-[1.1em]'> <BsPhoneFill size={30} />
+            <h2 className='flex items-center gap-4 text-[1.1em] border p-2'> <BsPhoneFill size={30} />
               <input
                 type="text"
 
@@ -191,7 +192,7 @@ const page = ({params}) => {
                 required
               />
             </h2>
-            <h2 className='flex items-center gap-4 text-[1.1em]'> <MdEmail size={30} />
+            <h2 className='flex items-center gap-4 text-[1.1em] border p-2'> <MdEmail size={30} />
               <input
                 type="email"
                 value={email}
@@ -212,22 +213,9 @@ const page = ({params}) => {
               onClose={handlePaymentClose}
             />
             <h2 className='text-[1.3vw]'>Get In Touch</h2>
-            <div id={style.iconsContainer} className="flex gap-4">
-              <div>
-                <Image id={style.icons} src={FaceIcon} width={40} alt="Facebook Icon" />
-              </div>
-              <div>
-                <Image id={style.icons} src={InstaIcon}  width={40} alt="Instagram Icon" />
-              </div>
-              <div>
-                <Image id={style.icons} src={WhatIcon}  width={40} alt="WhatsApp Icon" />
-              </div>
-              <div>
-                <Image id={style.icons} src={TwitIcon}  width={40} alt="Twitter Icon" />
-              </div>
-            </div>
+
             <h3>0201367519/ 0551678667</h3>
-            <a href='mailto:eventvote@gmail.com'>eventvote@gmail.com</a>
+            <a href='mailto:allvotesghana@gmail.com'>allvotesghana@gmail.com</a>
           </section>
           <Modal
             title="Success"

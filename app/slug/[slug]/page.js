@@ -100,13 +100,14 @@ const eventSlugFilter = eventSlug;
           <h2 id={style.usdCode} className='text-[1.2em] font-[500]'>{eventSlugFilter[0]&&eventSlugFilter[0].code}</h2>
           <section className='flex justify-center items-center'>
             <h4 className='text-[1.2em] font-[900]'>INFORMATION</h4>
-            <span></span>
-          </section>
-          <section id={style.inforDetails} className='flex flex-col justify-center gap-4'>
-            <h2 className='flex  p-2 items-center justify-start gap-10 text-[1.1em] md:text-xlg '> <MdOutlineUpdate size={30} />Starting Date: {eventSlugFilter[0] && eventSlugFilter[0].date}   </h2>
 
-            <h2 className='flex p-2  items-center justify-start gap-10 text-[1.1em] md:text-xlg '> <FaCreativeCommonsPd size={30} /> Cost Per Vote: {eventSlugFilter[0] && eventSlugFilter[0].cost}</h2>
-            <h2 className='flex p-2 items-center justify-start gap-10 text-[1.1em] md:text-xlg '> <BsCalendar2DateFill size={30} /> Closing Date: {eventSlugFilter[0] && eventSlugFilter[0].expired}</h2>
+          </section>
+          <span> USSD: *920*928#</span>
+          <section id={style.inforDetails} className='flex flex-col justify-center gap-4'>
+            <h2 className='flex border  p-2 items-center justify-start gap-10 text-[1.1em] md:text-xlg '> <MdOutlineUpdate size={30} />Starting Date: {eventSlugFilter[0] && eventSlugFilter[0].date}   </h2>
+
+            <h2 className='flex p-2 border items-center justify-start gap-10 text-[1.1em] md:text-xlg '> <FaCreativeCommonsPd size={30} /> Cost Per Vote: {eventSlugFilter[0] && eventSlugFilter[0].cost}</h2>
+            <h2 className='flex p-2 border items-center justify-start gap-10 text-[1.1em] md:text-xlg '> <BsCalendar2DateFill size={30} /> Closing Date: {eventSlugFilter[0] && eventSlugFilter[0].expired}</h2>
           </section>
 
           <section id={style.infoBox} className='flex flex-col gap-4 items-center mt-5 '>
@@ -119,7 +120,7 @@ const eventSlugFilter = eventSlug;
             <h2 id={style.getin} className='text-[1.3vw]'>Get In Touch</h2>
 
             <h3>0201367519/ 0551678667</h3>
-            <a href='mailto:eventvote@gmail.com'>eventvote@gmail.com</a>
+            <a href='mailto:allvotesghana@gmail.com'>allvotesghana@gmail.com</a>
           </section>
         </div>}
 
